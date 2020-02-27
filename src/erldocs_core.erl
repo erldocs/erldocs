@@ -837,7 +837,7 @@ read_xml (XmlFile) ->
     catch
         ?OTP_VSN_STACKTRACE(E, R, ST)
             Error = {E, R},
-            ?log("Error in read_xml(~p): ~p", [XmlFile,Error]),
+            ?log("Caught error in read_xml(~p): ~p", [XmlFile,Error]),
             ?log("~p", [ST]),
             throw({error_in_read_xml, XmlFile, Error})
     end.
