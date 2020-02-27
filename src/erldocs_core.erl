@@ -446,6 +446,8 @@ fun_stuff (App, Mod, {func, [], Children}) ->
               end;
           {name, [{name,Name}, {arity,Arity}], []} ->
               {"fun", App, Mod++":"++Name++"/"++Arity, Summary};
+          {name, [{name,Name}, {arity,Arity}, {since,_}], []} ->
+              {"fun", App, Mod++":"++Name++"/"++Arity, Summary};
           {name, [{name,Name}, {arity,Arity}, {clause_i,"1"}], []} ->
               {"fun", App, Mod++":"++Name++"/"++Arity, Summary};
           _Else ->
@@ -616,6 +618,8 @@ tr_erlref ({name, [{name,Name}, {arity,N}, {clause_i,ClauseI}], []}, Acc)
 tr_erlref ({name, [{name,____}, {arity,_}, {clause_i,ClauseI}], []}, ___)
   when ClauseI  >  "1" ->
     ignore;
+tr_erlref ({name, [{name,Name}, {arity,N}, {since,_}], []}, Acc) ->
+    tr_erlref({name, [{name,Name}, {arity,N}], []}, Acc);
 tr_erlref ({name, [{name,Name}, {arity,N}], []}, Acc) ->
     [{ids,Ids}, List, {functions,Funs}, {types,Types}] = Acc,
     NName = inc_name(Name, Ids, 0),
