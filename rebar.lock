@@ -1,8 +1,8 @@
 {"1.1.0",
-[{<<"erlydtl">>,{pkg,<<"erlydtl">>,<<"0.12.1">>},0},
- {<<"otp_vsn">>,{pkg,<<"otp_vsn">>,<<"2.6.1">>},0}]}.
+[{<<"erlydtl">>,{pkg,<<"erlydtl">>,<<"0.13.1">>},0},
+ {<<"otp_vsn">>,{pkg,<<"otp_vsn">>,<<"2.7.1">>},0}]}.
 [
 {pkg_hash,[
- {<<"erlydtl">>, <<"3FDE3190D30340B10CFCFDB4135A828761D468DB4E4B34817C6B91D295F3142D">>},
- {<<"otp_vsn">>, <<"1B1788021B2A187C2129030C9A6072E1371B354A43BB4098C58EB5136BB3C96F">>}]}
+ {<<"erlydtl">>, <<"91481928557544C843E2B33F8AA17693F16B65EEBC9EF08C71EBE90CBD1A84F1">>},
+ {<<"otp_vsn">>, <<"8443FB3D50FF9C0CE865C71FB6259B5B04ECA157A77874421CFA6B80BF195124">>}]}
 ].
